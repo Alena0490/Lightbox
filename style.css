@@ -1,0 +1,224 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 24px 48px;
+    background-color: #610099;
+}
+
+img.logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: -12px;
+    transition: transform 0.6s ease-in;
+}
+
+img.logo:hover {
+    transform: scale(1.04);
+}
+
+body {
+    background-color: #00020f;
+    font-family: "Lato", sans-serif;
+}
+
+article.gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+h2 {
+    font-size: 3.5rem;
+    font-family: "Faculty Glyphic", sans-serif;
+    text-shadow: 0 0 3px #B886FF, 0 0 7px #ff86fb, 0 0 15px #B886FF, 0 0 20px #ff86fb, 0 0 35px #610099, 0 0 2px #A100FF, 0 0 65px #610099;
+    color: #F2F2FF;
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+section.photos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+}
+
+.photos.a {
+   border-bottom: 1px solid #D6FF1A;
+}
+
+img.lightbox-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease-in;
+}
+
+img.lightbox-image:hover {
+    transform: scale(1.04);
+    box-shadow:  0 0 2px #B886FF, 0 0 3.5px #ff86fb, 0 0 7.5px #B886FF, 0 0 10px #ff86fb, 0 0 17.5px #610099, 0 0 1px #A100FF, 0 0 33px #610099;
+    border-radius: 5px;
+    z-index: 5;
+}
+
+/* Lightbox */
+
+#lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+  }
+  
+  #lightbox-overlay img {
+    width: auto;
+    max-height: 90%;
+  }
+  
+  body.noscroll {
+    overflow: hidden;
+  }
+
+  .lightbox-controls {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    display: flex;
+    gap: 3rem;
+    z-index: 10000;
+  }
+
+  .lightbox-button {
+    background: none;
+    border: none;
+    color: #D6FF1A;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+
+  .arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5rem;
+    background: none;
+    border: none;
+    color: #D6FF1A;
+    cursor: pointer;
+    z-index: 10000;
+  }
+
+  .arrow-left { left: 3rem; }
+  .arrow-right { right: 3rem; }
+
+  .lightbox-caption {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #F2F2FF;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    max-width: 80%;
+    text-align: center;
+  }
+  
+footer {
+    padding: 12px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-top: 3px solid #D6FF1A;
+}
+
+footer a {
+    display: inline-flex;
+    align-items: flex-end;
+    color: #F2F2FF;
+    text-decoration: none;
+    font-size: 18px;
+    /* line-height: 40px; */
+    vertical-align: baseline;
+    margin-right: 24px;
+    transition: all 0.8s ease-in;
+}
+
+footer a:hover {
+    color: #D6FF1A;
+    font-weight: 600;
+}
+
+img.social-icon {
+    max-width: 35px;
+    margin: 12px 12px 0px 0;
+}
+
+footer p {
+    color: #F2F2FF;
+    text-align: right;
+    font-size: 18px;
+    vertical-align: bottom;
+    margin-top: 24px;
+}
+  
+
+@media  screen and (max-width: 950px) {
+    section.photos {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media  screen and (max-width: 768px) {
+    h2 {
+        font-size: 3rem;
+    }
+
+    section.photos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media  screen and (max-width: 468px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .arrow-left, .arrow-right {
+        font-size: 3.5rem;
+        color: #f5f5ff;
+    }
+
+    .lightbox-controls {
+        right: 1rem;
+        gap: 1rem;
+    }
+
+    .lightbox-button {
+        font-size: 2.5rem;
+        color: #f5f5ff;
+    }
+
+    .arrow-left { left: 1rem; }
+    .arrow-right { right: 1rem; }
+    
+
+    section.photos {
+        grid-template-columns: 1fr;
+    }
+}
