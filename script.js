@@ -1,4 +1,57 @@
+    /****Burger menu */
+    document.addEventListener('DOMContentLoaded', function () {
+        // BURGER MENU
+        const burgerToggle = document.getElementById('burger-toggle');
+        const burgerNav = document.querySelector('.mobile-nav');
+        const burgerIcon = burgerToggle.querySelector('i');
+      
+        // CONTACT DROPDOWN
+        const contactToggle = document.getElementById('contact-toggle');
+        const contactDropdown = document.getElementById('contact-dropdown');
+        const contactIcon = contactToggle.querySelector('i');
+      
+        // Helper: zavře contact dropdown
+        function closeContact() {
+          contactDropdown.style.display = 'none';
+          contactDropdown.classList.remove('open');
+          contactIcon.classList.add('fa-phone');
+          contactIcon.classList.remove('fa-xmark');
+        }
+      
+        // Helper: zavře burger menu
+        function closeBurger() {
+          burgerNav.style.display = 'none';
+          burgerIcon.classList.add('fa-bars');
+          burgerIcon.classList.remove('fa-xmark');
+        }
+      
+        burgerToggle.addEventListener('click', () => {
+          const isOpen = burgerNav.style.display === 'flex';
+      
+          // nejdřív zavřeme contact dropdown
+          closeContact();
+      
+          // přepneme stav burgeru
+          burgerNav.style.display = isOpen ? 'none' : 'flex';
+          burgerIcon.classList.toggle('fa-bars', isOpen);
+          burgerIcon.classList.toggle('fa-xmark', !isOpen);
+        });
+      
+        contactToggle.addEventListener('click', () => {
+          const isOpen = contactDropdown.classList.toggle('open');
+      
+          // nejdřív zavřeme burger menu
+          closeBurger();
+      
+          // přepneme zobrazení dropdownu
+          contactDropdown.style.display = isOpen ? 'block' : 'none';
+          contactIcon.classList.toggle('fa-phone', !isOpen);
+          contactIcon.classList.toggle('fa-xmark', isOpen);
+        });
+      });
+                 
 document.addEventListener("DOMContentLoaded", function () {
+    /***Lightbox */
     // Načteme všechny odkazy, které mají atribut aria-label="lightbox"
     const links = document.querySelectorAll('a[aria-label="lightbox"]');
   

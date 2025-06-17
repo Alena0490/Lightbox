@@ -11,21 +11,141 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="manifest" href="img/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Faculty+Glyphic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Faculty+Glyphic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <a href="https://alena-pumprova.cz/" target="_blank">
-            <img src="img/logo.png" alt="Logo Alena Pumprová" class="logo">
+        <a href="https://alena-pumprova.cz/" target="_blank" class="logo-wrap">
+          <img src="img/logo.png" alt="Logo Alena Pumprová" class="logo">
         </a>
+      
+        <div class="right"> 
+          <!-- Navigace pro desktop -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Reference</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+      
+          <!-- Navigace pro burger menu -->
+            <div class="burger-menu">
+                <button aria-label="Show menu" id="burger-toggle" class="toggle-button">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Reference</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>        
+      
+          <!-- Kontaktní informace -->
+    
+            <!-- Kontakt desktop -->
+                <div class="contact-desktop contact-us">
+                    <p class="text header-link">
+                        <a href="mailto:alenapumprova@seznam.cz">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="text">
+                                E-mail:
+                            </span>
+                                <span class="underline">
+                                    alenapumprova@seznam.cz
+                                </span>
+                        </a>
+                    </p>
+
+                    <p class="text header-link">
+                        <a href="tel:+420732746628">
+                            <i class="fa-solid fa-phone"></i>
+                            <span class="text">
+                                Phone:
+                            </span>
+                            <span class="underline">
+                                732 746 628 
+                            </span>
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Kontakt mobil -->
+                <div class="contact-mobile contact-us">
+                    <button id="contact-toggle" aria-label="Show contact" class="toggle-button">
+                        <i class="fa-solid fa-phone"></i>
+                    </button>
+
+                    <div class="dropdown" id="contact-dropdown">
+                        <p class="text header-link">
+                            <a href="mailto:alenapumprova@seznam.cz">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="text">
+                                    E-mail:
+                                </span>
+                                    alenapumprova@seznam.cz
+                            </a>
+                        </p>
+
+                        <p class="text header-link">
+                            <a href="tel:+420732746628">
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="text">
+                                    Phone:
+                                </span>
+                            732 746 628  
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
     </header>
+      
     <main>
-        <article class="gallery">
-            <h2>Glowing pictures</h2>
-            <section class="photos">
+        <section class="about">
+            <h2>About us</h2>
+            <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad reiciendis dolor facere aspernatur dolore. Nulla, voluptatem exercitationem molestias a velit provident. Necessitatibus quasi expedita laudantium ducimus voluptatibus vel! Porro, enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, repellendus libero iure non ab beatae minima quod iusto corporis consectetur blanditiis velit atque ex deserunt ut officia ipsum, molestiae sapiente.</p>
+            <br>
+            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, beatae nostrum? Dolorem quaerat consequatur possimus ipsum, debitis, quidem unde asperiores ipsam voluptate minima temporibus velit inventore at saepe perspiciatis quam.</p>
+        </section>
+        <section class="references">
+            <h2>References</h2>
+            <div class="articles">
+                <article>
+                    <img src="img/avatar3.webp" alt="">
+                    <h3>Lorem ipsum</h3>
+                    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vel maxime quibusdam sequi repellat, dolor provident aspernatur nulla quos officia obcaecati quae tempore autem corrupti fugiat expedita iure ratione qui?</p>
+                </article>
+
+                <article>
+                    <img src="img/avatar2.webp" alt="">
+                    <h3>Lorem ipsum</h3>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci corporis, doloribus dolorem ipsam quibusdam quos. Repudiandae, vitae nam voluptates numquam reprehenderit voluptatibus itaque animi, eaque eum, molestiae ullam unde? Earum.</p>
+                </article>
+
+                <article>
+                    <img src="img/avatar3.webp" alt="">
+                    <h3>Lorem ipsum</h3>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati delectus quas consequatur temporibus aliquid cumque nihil id quibusdam fugit atque vitae nostrum saepe totam, ratione, molestias maiores iusto eaque similique.</p>
+                </article>
+            </div>
+        </section>
+        <section class="gallery">
+            <h2>Photogallery</h2>
+            <article class="photos">
                 <a aria-label="lightbox"  href="img/zebra.jpeg" data-lightbox="roadtrip" data-title="The Luminous Nomad">
                     <img class="lightbox-image" src="img/zebra400.webp" width="400" height="400"  alt="White neon zebra">
                 </a>
@@ -50,8 +170,33 @@
                 <a aria-label="lightbox"  href="img/butterfly.jpeg" data-lightbox="roadtrip" data-title="Gentle whisper">
                     <img class="lightbox-image" src="img/butterfly400.webp" width="400" height="400"  alt="Blue neon butterfly">
                 </a>
-            </section>
-        </article>
+            </article>
+        </section>
+
+        <section class="contacts">
+            <h2>Contact us</h2>
+
+            <!-- <h3>Get in touch:</h3>
+            <ul>
+                <li>E-mail: <a href="mailto:alenapumprova@seznam.cz">alenapumprova@seznam.cz</a></li>
+                <li>Phone: <a href="tel:+420732746628">732 746 628</a></li>
+            </ul> -->
+            <form action="">
+                <div>
+                    <label for="name" required>Name:</label>
+                    <input type="text" id="name">
+                </div>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="textarea">
+                    <label for="message" id="message">Message:</label>
+                    <textarea name="message" id=""></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </main>
     <footer>
         <div class="links">
@@ -60,7 +205,6 @@
         </div>
         <p>Copyright Alena Pumpprová, 2025</p>
     </footer>
-  
     <script src="script.js"></script>
 </body>
 </html>
