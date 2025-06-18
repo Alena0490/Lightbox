@@ -31,10 +31,10 @@
           <!-- Navigace pro desktop -->
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Reference</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#" class="jq--scroll-about">About</a></li>
+                    <li><a href="#" class="jq--scroll-reference">Reference</a></li>
+                    <li><a href="#" class="jq--scroll-gallery">Gallery</a></li>
+                    <li><a href="#" class="jq--scroll-contact">Contacts</a></li>
                 </ul>
             </nav>
       
@@ -45,10 +45,10 @@
                 </button>
                 <nav class="mobile-nav">
                     <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Reference</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#" class="jq--scroll-about">About</a></li>
+                        <li><a href="#" class="jq--scroll-reference">Reference</a></li>
+                        <li><a href="#" class="jq--scroll-gallery">Gallery</a></li>
+                        <li><a href="#" class="jq--scroll-contact">Contacts</a></li>
                     </ul>
                 </nav>
             </div>        
@@ -115,35 +115,36 @@
     </header>
       
     <main>
-        <section class="about">
-            <h2>About us</h2>
+        <div class="cursor"></div>
+        <section class="about jq--about">
+            <h2>About me</h2>
             <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad reiciendis dolor facere aspernatur dolore. Nulla, voluptatem exercitationem molestias a velit provident. Necessitatibus quasi expedita laudantium ducimus voluptatibus vel! Porro, enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, repellendus libero iure non ab beatae minima quod iusto corporis consectetur blanditiis velit atque ex deserunt ut officia ipsum, molestiae sapiente.</p>
             <br>
             <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, beatae nostrum? Dolorem quaerat consequatur possimus ipsum, debitis, quidem unde asperiores ipsam voluptate minima temporibus velit inventore at saepe perspiciatis quam.</p>
         </section>
-        <section class="references">
+        <section class="references jq--reference">
             <h2>References</h2>
             <div class="articles">
                 <article>
-                    <img src="img/avatar3.webp" alt="">
+                    <img src="img/avatar4.webp" alt="">
                     <h3>Lorem ipsum</h3>
                     <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vel maxime quibusdam sequi repellat, dolor provident aspernatur nulla quos officia obcaecati quae tempore autem corrupti fugiat expedita iure ratione qui?</p>
                 </article>
 
                 <article>
-                    <img src="img/avatar2.webp" alt="">
+                    <img src="img/avatar5.webp" alt="">
                     <h3>Lorem ipsum</h3>
                     <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci corporis, doloribus dolorem ipsam quibusdam quos. Repudiandae, vitae nam voluptates numquam reprehenderit voluptatibus itaque animi, eaque eum, molestiae ullam unde? Earum.</p>
                 </article>
 
                 <article>
-                    <img src="img/avatar3.webp" alt="">
+                    <img src="img/avatar6.webp" alt="">
                     <h3>Lorem ipsum</h3>
                     <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati delectus quas consequatur temporibus aliquid cumque nihil id quibusdam fugit atque vitae nostrum saepe totam, ratione, molestias maiores iusto eaque similique.</p>
                 </article>
             </div>
         </section>
-        <section class="gallery">
+        <section class="gallery jq--gallery">
             <h2>Photogallery</h2>
             <article class="photos">
                 <a aria-label="lightbox"  href="img/zebra.jpeg" data-lightbox="roadtrip" data-title="The Luminous Nomad">
@@ -173,8 +174,8 @@
             </article>
         </section>
 
-        <section class="contacts">
-            <h2>Contact us</h2>
+        <section class="contacts jq--contact">
+            <h2>Contact me</h2>
 
             <!-- <h3>Get in touch:</h3>
             <ul>

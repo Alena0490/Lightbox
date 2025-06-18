@@ -33,7 +33,10 @@ body::-webkit-scrollbar {
   }
   
   header {
-    position: relative;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -46,18 +49,25 @@ body::-webkit-scrollbar {
 .logo-wrap {
     display: block;
     margin-right: 12px;
+    outline: none;
 }
 
 img.logo {
     max-width: 150px;
     height: auto;
     margin-bottom: -12px;
-    border: none;
-    transition: transform 0.6s ease-in;
+    transition: all 0.6s ease-in;
 }
 
 img.logo:hover {
-    transform: scale(1.04);
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 1px #B886FF)
+    drop-shadow(0 0 3px #ff86fb)
+    drop-shadow(0 0 5px #B886FF)
+    drop-shadow(0 0 2.5px #ff86fb)
+    drop-shadow(0 0 15px #610099)
+    drop-shadow(0 0 2px #A100FF)
+    drop-shadow(0 0 40px #610099);   
 }
 
 .right {
@@ -130,6 +140,17 @@ nav ul li a:hover {
     transition: all 0.6s ease-in;
 }
 
+.toggle-button i:hover {
+    color: #F2F2FF;
+    filter: drop-shadow(0 0 1px #B886FF)
+    drop-shadow(0 0 3px #ff86fb)
+    drop-shadow(0 0 5px #B886FF)
+    drop-shadow(0 0 2.5px #ff86fb)
+    drop-shadow(0 0 15px #610099)
+    drop-shadow(0 0 2px #A100FF)
+    drop-shadow(0 0 40px #610099);  
+}
+
 .header-link {
     /* padding: 0px 0px 0px 12px; */
     vertical-align: bottom;
@@ -139,6 +160,18 @@ nav ul li a:hover {
     display: inline-flex;
     padding: 0px 12px;
     text-decoration: none;
+    transition: all 0.6s ease-in;
+}
+
+.header-link i:hover {
+    color: #F2F2FF;
+    filter: drop-shadow(0 0 1px #B886FF)
+    drop-shadow(0 0 3px #ff86fb)
+    drop-shadow(0 0 5px #B886FF)
+    drop-shadow(0 0 2.5px #ff86fb)
+    drop-shadow(0 0 15px #610099)
+    drop-shadow(0 0 2px #A100FF)
+    drop-shadow(0 0 40px #610099);  
 }
 
 .header-link a {
@@ -146,10 +179,15 @@ nav ul li a:hover {
     transition: all 0.8s ease-in;
     text-decoration: none;
     vertical-align: bottom;
+    word-break: normal;
+    overflow-wrap: normal;
+    white-space: normal;
 }
 
 .underline {
     text-decoration: underline;
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 .underline:hover {
@@ -169,6 +207,12 @@ span.text {
     vertical-align: bottom;
 }
 
+main {
+    /* position: relative; */
+    /* top: 7rem; */
+    margin-top: 7rem;
+}
+
 section {
     margin: 0 auto 48px;
 }
@@ -184,7 +228,8 @@ section.about {
 
 section.references {
     display: flex;
-    background-color: #61009980;
+    /* background-color: #61009980; */
+    background-color: #00020f;
     padding: 0px 24px 48px 24px;
     /* border-top: 3px solid #D6FF1A; */
     flex-direction: column;
@@ -205,8 +250,16 @@ section.references article {
     flex-direction: column;align-items: center;
     min-width: 250px;
     padding: 24px;
-    background-color: #610099;
+    /* background-color: #610099; */
+    border-radius: 3px;
+    background-color: #00020f;
+    transition: transform 0.6s ease-in, box-shadow 0.4s ease-in;
+    
+}
 
+section.references article:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 1.5px #B886FF, 0 0 3.5px #ff86fb, 0 0 7px #B886FF, 0 0 10px #ff86fb, 0 0 25px #610099, 0 0 2px #A100FF, 0 0 55px #610099;
 }
 
 .references article img {
@@ -406,6 +459,8 @@ form {
     max-width: 1200px;
     scroll-snap-align: start;      /* nebo center, end */
     scroll-snap-stop: always; 
+    /* background-color: #00020f;; */
+    z-index: 5;
 }
 
   form label {
@@ -422,6 +477,7 @@ form input[type="tel"],
 form textarea {
   width: 100%;
   outline: none;
+  border: none;
   padding: 12px;
   background-color: #F2F2FFE9;
   color: #610099;
@@ -504,9 +560,12 @@ footer {
     padding: 12px 24px;
     display: flex;
     flex-wrap: wrap;
+    background-color: #00020f;
     align-items: flex-end;
     justify-content: space-between;
     border-top: 3px solid #D6FF1A;
+    z-index: 5;
+    position: relative;
 }
 
 footer a {
@@ -529,10 +588,17 @@ img.social-icon {
     max-width: 35px;
     margin: 12px 12px 0px 0;
     border-radius: 7px;
+    transition: all 0.6s ease-in;
 }
 
 img.social-icon:hover {
-    box-shadow: 0 0 1.5px #B886FF, 0 0 3.5px #ff86fb, 0 0 7px #B886FF, 0 0 10px #ff86fb, 0 0 25px #610099, 0 0 2px #A100FF, 0 0 55px #610099;    
+    filter: drop-shadow(0 0 1px #B886FF)
+    drop-shadow(0 0 3px #ff86fb)
+    drop-shadow(0 0 5px #B886FF)
+    drop-shadow(0 0 2.5px #ff86fb)
+    drop-shadow(0 0 15px #610099)
+    drop-shadow(0 0 2px #A100FF)
+    drop-shadow(0 0 40px #610099);    
 } 
 
 footer p {
@@ -543,7 +609,60 @@ footer p {
     margin-top: 24px;
 }
 
-@media  screen and (max-width: 1200px) {
+/* Cursor */
+.cursor {
+    width: 30px;
+    height: 30px;
+    /* background-color: #f2f2ff; */
+    border: 7px solid #F2F2FF;
+    filter: drop-shadow(0 0 1px #B886FF)
+    drop-shadow(0 0 3px #ff86fb)
+    drop-shadow(0 0 5px #B886FF)
+    drop-shadow(0 0 2.5px #ff86fb)
+    drop-shadow(0 0 15px #610099)
+    drop-shadow(0 0 2px #A100FF)
+    drop-shadow(0 0 40px #610099);  
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.9);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+@media  screen and (max-width: 1400px) {
 
     header {
         height: 7rem;

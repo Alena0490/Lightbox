@@ -1,3 +1,39 @@
+/***Scrolování na stránce */
+document.addEventListener('DOMContentLoaded', function () {
+    function smoothScroll(targetSelector) {
+        const target = document.querySelector(targetSelector);
+        if (target) {
+            const offset = 90; // Zatím 0, později můžeš změnit
+            const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+            window.scrollTo({
+                top,
+                behavior: 'smooth'
+            });
+
+            history.replaceState(null, null, ' ');
+        } else {
+            console.warn("Sekce " + targetSelector + " nebyla nalezena.");
+        }
+    }
+
+    const mappings = {
+        '.jq--scroll-about': '.jq--about',
+        '.jq--scroll-reference': '.jq--reference',
+        '.jq--scroll-gallery': '.jq--gallery',
+        '.jq--scroll-contact': '.jq--contact'
+    };
+
+    for (const [triggerSelector, targetSelector] of Object.entries(mappings)) {
+        document.querySelectorAll(triggerSelector).forEach(el => {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+                smoothScroll(targetSelector);
+            });
+        });
+    }
+});
+ 
     /****Burger menu */
     document.addEventListener('DOMContentLoaded', function () {
         // BURGER MENU
@@ -182,4 +218,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+
+
+  /**Cursor */
+  const cursor = document.querySelector('.cursor');
+
+  document.addEventListener('mousemove', e => {
+      cursor.setAttribute("style", "top: "+(e.pageY - 20)+"px; left: "+(e.pageX - 20)+"px;")
+  })
+
+  document.addEventListener('click', () => {
+      cursor.classList.add("expand");
+
+      setTimeout(() => {
+          cursor.classList.remove("expand");
+      }, 500)
+  })
   
