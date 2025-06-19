@@ -198,7 +198,8 @@ p.text,
 a span.text {
     color: #F2F2FF;
     line-height: 1.4;
-    font-size: 24px;    
+    font-size: 24px;
+    z-index: 5;    
 }
 
 span.text {
@@ -220,6 +221,7 @@ section {
 section.about {
   padding: 24px 24px 12px 24px;
   max-width: 1200px;
+  z-index: 5;
 }
 
 .about p.text {
