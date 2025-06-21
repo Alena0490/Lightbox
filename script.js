@@ -33,6 +33,39 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+/***Scrolování na stránce - z headeru */
+document.addEventListener('DOMContentLoaded', function () {
+    const startButton = document.querySelector('.scroll-start');
+    const endTarget = document.querySelector('.scroll-end');
+  
+    if (startButton && endTarget) {
+        startButton.addEventListener('click', function (e) {
+            e.preventDefault();
+  
+            const offset = 120; // o kolik pixelů níž než začátek cílového elementu
+            const top = endTarget.getBoundingClientRect().top + window.scrollY - offset;
+  
+            window.scrollTo({
+                top: top,
+                behavior: 'smooth'
+            });
+  
+            history.replaceState(null, null, ' ');
+        });
+    }
+  });
+  
+  // Při opětovném načtení stránky skoč nahoru
+  window.addEventListener("beforeunload", function () {
+    window.scrollTo(0, 0);
+  });
+  
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }, 0);
+  });
  
     /****Burger menu */
     document.addEventListener('DOMContentLoaded', function () {
@@ -223,9 +256,11 @@ document.addEventListener("DOMContentLoaded", function () {
   /**Cursor */
   const cursor = document.querySelector('.cursor');
 
-  document.addEventListener('mousemove', e => {
-      cursor.setAttribute("style", "top: "+(e.pageY - 20)+"px; left: "+(e.pageX - 20)+"px;")
-  })
+document.addEventListener('mousemove', (e) => {
+  // e.clientX a clientY zajistí pozici ve viewportu
+  cursor.style.transform = `translate3d(${e.clientX - 20}px, ${e.clientY - 20}px, 0)`;
+});
+
 
   document.addEventListener('click', () => {
       cursor.classList.add("expand");
